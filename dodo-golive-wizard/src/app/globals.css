@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dodo-black: #0a0a0a;
+  --dodo-white: #f5f2ec;
+  --dodo-orange: #ff5c00;
+  --dodo-orange-light: #ff8040;
+  --dodo-gray: #1a1a1a;
+  --dodo-gray-mid: #2a2a2a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--dodo-black);
+  color: var(--dodo-white);
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: var(--dodo-black);
+  color: var(--dodo-white);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Noise texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.4;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dodo-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--dodo-gray-mid);
+  border-radius: 2px;
+}
+
+/* Orange glow utility */
+.orange-glow {
+  box-shadow: 0 0 40px rgba(255, 92, 0, 0.15), 0 0 80px rgba(255, 92, 0, 0.05);
+}
+
+.orange-text-glow {
+  text-shadow: 0 0 30px rgba(255, 92, 0, 0.5);
+}
+
+/* Shimmer effect */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 92, 0, 0.1) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+/* Step card hover */
+.step-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Progress line animation */
+@keyframes progressFill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.progress-fill {
+  animation: progressFill 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Pulse ring */
+@keyframes pingRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.ping-ring {
+  animation: pingRing 1.5s ease-out infinite;
+}
