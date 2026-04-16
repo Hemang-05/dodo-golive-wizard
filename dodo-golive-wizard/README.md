@@ -1,25 +1,25 @@
-# Dodo Payments — Go-Live Wizard
+# Dodo Payments - Go-Live Wizard
 
 A prototype built for the Dodo Payments PM Assignment.
 
 ## What this is
 
-A **Go-Live Wizard** — a guided 4-step flow that takes a merchant from "live access granted" to "first real transaction" with confidence. Built to solve the 45% drop-off between Live Access → First Transaction in the Dodo merchant funnel.
+A **Go-Live Wizard** - a guided 4-step flow that takes a merchant from "live access granted" to "first real transaction" with confidence. Built to solve the 45% drop-off between Live Access → First Transaction in the Dodo merchant funnel.
 
 ## Flow
 
 ```
 Dashboard (entry point)
     ↓  [Go Live banner / CTA]
-Step 1 — Product & Pricing confirmation
+Step 1 - Product & Pricing confirmation
     ↓
-Step 2 — What Dodo Handles (MoR explainer)
+Step 2 - What Dodo Handles (MoR explainer)
     ↓
-Step 3 — Pre-Launch Readiness Check
+Step 3 - Pre-Launch Readiness Check
     ↓
-Step 4 — Go Live confirmation
+Step 4 - Go Live confirmation
     ↓
-Success — Live mode activated 🚀
+Success - Live mode activated 🚀
 ```
 
 ## Tech Stack
@@ -56,7 +56,7 @@ npm i -g vercel
 # Deploy
 vercel
 
-# Follow prompts — it auto-detects Next.js
+# Follow prompts - it auto-detects Next.js
 ```
 
 Or connect your GitHub repo at vercel.com/new for automatic deploys on every push.
@@ -90,7 +90,7 @@ src/
 
 ## Notes
 
-- No backend required — all state is local React state
+- No backend required - all state is local React state
 - No real payments are processed
 - All data is mocked
 - Focus is on UX flow, clarity, and confidence-building
